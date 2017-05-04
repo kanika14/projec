@@ -48,9 +48,35 @@ a:focus, a:hover {
 }
 
 .background{
-	    background: linear-gradient(50deg, HSLA(205, 62%, 44%, 1), #F62D51);
+	background-image: url("../img/background.jpg");
 }
 
 .customdropdown{
 	top: 60px !important;
+}
+
+.title{
+	color: #00897b;
+}
+
+.main_section{
+	background-color: #0B747E !important;
+	padding-top: 0% !important;
+	padding-bottom: 0% !important
+}
+
+.main_section_new{
+	background-image: url("../img/south-mumbai.jpg");
+	opacity: 0.2;
+	background-attachment: fixed;
+	padding-top: 20% !important;
+	padding-bottom: 20% !important
+}
+
+.white_text{
+	color: #fff !important;
+}
+
+.center{
+	text-align: center!important;
 }

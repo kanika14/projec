@@ -1,7 +1,7 @@
 <?php 
 if(!session_id())
 	session_start();
-$page_title = "The Social Network";
+$page_title = "Global Institute of technology and Management";
  ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $page_title = "The Social Network";
 		<script type="text/javascript" src="script/validation.min.js"></script>
 		<script src="script/common.js"></script>
 		<script type="text/javascript" src="script/register.js"></script>
-		
+		<link href="css/font.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/materialize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/font.css">
@@ -22,13 +22,13 @@ $page_title = "The Social Network";
 	<div class="navbar-fixed">
 		<nav>
 		  <div class="nav-wrapper">
-		    <a href="index.php" class="brand-logo left">The Social Network</a>
+		    <a href="index.php" class="brand-logo left">GITM GURGAON</a>
 		    <ul class="right hide-on-med-and-down">
 		      <li><a href="index.php">Home</a></li>
 		      <li><a href="careers.php">Careers</a></li>
-		      <li><a href="">Photo Gallery</a></li>
-		      <li><a href="">Video Gallery</a></li>
-		       <li><a href="">Contact Us</a></li>
+		      <li><a href="photos.php">Photos</a></li>
+		      <li><a href="videos.php">Videos</a></li>
+		       <li><a href="contact.php">Contact Us</a></li>
 		      <?php if(!isset($_SESSION['user_session'])) { ?>
 		      	<li><a href="login.php">Login</a></li>
 		      	<li><a href="signup.php">Sign Up</a></li>

@@ -6,8 +6,29 @@ $(document).ready(function(){
 	var email = $("#email").val();
 	var phone = $("#phone").val();
 	var type = $("#userType").val();
+	alert(type);
+	if (name == '') {
+		$('#register_output').text("Please Fill Out Your Name");
+		$('#username').focus();
+	}
+	else if(pass == ''){
+		$('#register_output').text("Please Fill Out Your Password");
+		$('#password').focus();
+	}
+	else if(email == ''){
+		$('#register_output').text("Please Fill Out Your email");
+		$('#email').focus();
+	}
+	else if(phone == ''){
+		$('#register_output').text("Please Fill Out Your phone");
+		$('#phone').focus();
+	}
+	else if(type == ''){
+		$('#register_output').text("Please Select Your Type");
+		$('#userType').focus();
+	}
+	else{
 
-	
 	$.ajax({
 		method: "post",
 		url : "sign.php",
@@ -22,7 +43,7 @@ $(document).ready(function(){
 		{	
 			window.location.href = 'welcome.php';
 		}
-	});
+	}); }
 	});
 });
 
