@@ -6,7 +6,11 @@ $(document).ready(function(){
 	var email = $("#email").val();
 	var phone = $("#phone").val();
 	var type = $("#userType").val();
-	alert(type);
+	var gender = $("input[name='gender']:checked").val();
+	var dept = $("#dept").val();
+	var dob = $("#dob").val();
+	var colgid = $("#colgid").val();
+
 	if (name == '') {
 		$('#register_output').text("Please Fill Out Your Name");
 		$('#username').focus();
@@ -37,7 +41,11 @@ $(document).ready(function(){
 			pass : pass,
 			email : email,
 			phone : phone,
-			type : type
+			type : type,
+			gender : gender,
+			dept : dept,
+			dob : dob,
+			colgid : colgid
 		},
 		success : function(data)
 		{	

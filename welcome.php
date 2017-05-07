@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if(!isset($_SESSION['user_session'])){
 	header("Location: index.php");
 }
@@ -10,6 +11,20 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
 $row = mysqli_fetch_assoc($resultset);
 include('container.php');
 ?>
+
+      <?php if( isset($_SESSION['user_type']))
+            {
+              if ($_SESSION['user_type'] == "admin") {  ?>
+            <div class="container">
+              <div class="row">
+                <div class="col s6">
+                  <h4>Welcome <?php echo $_SESSION['user_session']; ?></h4> 
+                  <h5>As You are the admin here, You can do whatever you want.</h5>
+                </div>
+              </div>
+            </div>
+      <?php   } }
+            ?>
 
 
 <div class="container">
@@ -29,9 +44,31 @@ include('container.php');
     </div>
   </div>
   </div>
+<div class="col s4"></div>
+<div class="col s5">
+  <h4>Search the College...</h4>
+  <form>
+        <div class="input-field">
+          <input id="search" type="search" onkeyup="searchStudents()" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+  </form>
+</div>
   </div>
-
-
+  <div class="row">
+      <div class="col-md-8 resultsdiv">
+        <div id="blk-1" class="toHide">
+          <input type='hidden' id='current_page' />
+        <input type='hidden' id='show_per_page' />
+  
+          <div class="content">
+            <div id="hsndiv" class="resultsdiv sacdiv hsnsac_div_height"></div>
+          </div>
+           
+        </div>
+    </div>
+  </div>  
 </div>
 
 

@@ -80,3 +80,8 @@ a:focus, a:hover {
 .center{
 	text-align: center!important;
 }
+
+.zeropadding{
+	padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
